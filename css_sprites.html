@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CssSprites">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Sprites</title>
+    <link rel="stylesheet" href="css/css_sprites.css" />
+</head>
+<body>
+    <div class="main clearfix">
+        <nav></nav>
+        <section class="fileCtrl" ng-controller="fileCtrl" ng-include="fileCtrlUrl"></section>
+        <section class="spritesPreview" ng-controller="canvasCtrl" ng-include="canvasCtrlUrl"></section>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/css_sprites.js"></script>
+    <script type="text/javascript" src="js/css_file_ctrl.js"></script>
+    <script type="text/javascript" src="js/css_canvas_ctrl.js"></script>
+</body>
+</html>
