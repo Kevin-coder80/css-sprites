@@ -1,8 +1,12 @@
 centered-around( w=@width )
+    width: 25px;
+    height: 20px;
     left: 50%;
     margin-left: -( w/2 )px;
 
 centered-vertically( h=@height )
+    width: 25px;
+    height: 20px;
     top: 50%;
     margin-top: -( h/2 )px;
 
@@ -54,18 +58,15 @@ body
 .fileCtrl
     .dir-ctrl
         position: relative;
-        margin-top: 20px;
-        margin-left: 20px;
-        width: 86px;
-        height: 86px;
 
-        a,
+        ul
+            margin: 0;
+            padding: 0;
+
         input
             position: absolute;
             display: block;
-
-        a
-            cursor: pointer;
+            text-align: center;
 
        .num
             width: 20px;
@@ -74,33 +75,60 @@ body
             centered-around( 26 );
             centered-vertically( 26 );
 
+.fileCtrl
+    .title
+        li
+            list-style: none;
+            float: left;
+            width: 159px;
+            height: 40px;
+            line-height 40px;
+            font-size: 18px;
+            text-align: center;
+            border-bottom: 1px dashed #ccc;
+
+        li:first-child
+            width: 80px;
+
+        li:nth-child( even )
+            border-left: 1px dashed #ccc;
+            border-right: 1px dashed #ccc;
+
+    .list
+        li
+            list-style: none;
+
+        span
+            float: left;
+            width: 159px;
+            height: 80px;
+            border-bottom: 1px dashed #ccc;
+
+        span:first-child
+            width: 80px;
+            line-height: 100px;
+
+        span:nth-child( even )
+            position: relative;
+            border-left: 1px dashed #ccc;
+            border-right: 1px dashed #ccc;
+
         .top
-            background: url( ../imgs/icons/top.png ) no-repeat;
-            width: 21px;
-            height: 13px;
-            top: 0;
             centered-around();
 
         .right
-            background: url( ../imgs/icons/right.png ) no-repeat;
-            width: 13px;
-            height: 21px;
             right: 0;
             centered-vertically();
 
         .bottom
-            background: url( ../imgs/icons/bottom.png ) no-repeat;
-            width: 21px;
-            height: 13px;
             bottom: 0;
             centered-around();
 
         .left
-            background: url( ../imgs/icons/left.png ) no-repeat;
-            width: 13px;
-            height: 21px;
-            left: 0;
             centered-vertically();
+
+        .spanBG
+            background: #9933cc;
 
 .spritesPreview
     .canvas-border
